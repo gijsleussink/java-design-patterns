@@ -1,5 +1,6 @@
 dependencies {
-    compile 'org.projectlombok:lombok:1.16.18'
+    annotationProcessor 'org.projectlombok:lombok:1.16.18'
+    implementation 'org.projectlombok:lombok:1.16.18'
     testCompile 'junit:junit:4.12'
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
     testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
