@@ -1,0 +1,7 @@
+dependencies {
+    testCompile 'org.assertj:assertj-core:3.9.1'
+    testCompile 'uk.org.lidalia:slf4j-test:1.0.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+    testCompile 'org.mockito:mockito-all:1.9.5'
+}

@@ -8,13 +8,13 @@ target
 *.jar
 *.war
 *.ear
-.idea
+.idea/
 *.iml
 *.swp
 datanucleus.log
-/bin/
-/bin/
-/bin/
+bin/
 *.log
 data-mapper/src/main/resources/log4j.xml
 event-sourcing/Journal.json
+.gradle/
+build/

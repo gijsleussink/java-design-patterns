@@ -1,0 +1,10 @@
+dependencies {
+    compile 'org.springframework.data:spring-data-jpa:1.9.2.RELEASE'
+    compile 'org.hibernate:hibernate-entitymanager:5.0.1.Final'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    compile 'com.h2database:h2:1.4.190'
+    compile 'com.google.guava:guava:19.0'
+    testCompile 'com.github.sbrannen:spring-test-junit5:1.0.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+}

@@ -1,0 +1,20 @@
+plugins {
+    id 'war'
+}
+
+dependencies {
+    compile project(':naked-objects:naked-objects-dom')
+    compile project(':naked-objects:naked-objects-fixture')
+    compile 'org.apache.isis.viewer:isis-viewer-wicket-impl:1.9.0'
+    compile 'org.apache.isis.core:isis-core-viewer-restfulobjects-server:1.9.0'
+    compile 'org.apache.isis.core:isis-core-security-shiro:1.9.0'
+    compile 'org.apache.isis.core:isis-core-runtime:1.9.0'
+    compile 'org.apache.isis.core:isis-core-wrapper:1.9.0'
+    compile 'org.apache.isis.core:isis-core-security:1.9.0'
+    compile 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
+    compile 'org.hsqldb:hsqldb:2.3.1'
+    compile 'org.lazyluke:log4jdbc-remix:0.2.7'
+    runtime 'org.apache.isis.core:isis-core-webserver:1.9.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.junit.vintage:junit-vintage-engine:4.12.2'
+}

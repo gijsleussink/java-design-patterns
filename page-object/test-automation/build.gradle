@@ -1,0 +1,5 @@
+dependencies {
+    compile 'net.sourceforge.htmlunit:htmlunit:2.22'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+}

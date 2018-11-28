@@ -1,0 +1,5 @@
+dependencies {
+    compile 'com.google.code.gson:gson:2.8.1'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+}
