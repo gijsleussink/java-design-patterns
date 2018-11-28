@@ -22,10 +22,11 @@
  */
 package com.iluwatar.serverless.faas.api;
 
-import com.amazonaws.services.lambda.runtime.Context;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import com.amazonaws.services.lambda.runtime.Context;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsNull.notNullValue;
