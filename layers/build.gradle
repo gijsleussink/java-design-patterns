@@ -1,12 +1,12 @@
 dependencies {
-    compile 'org.springframework.data:spring-data-jpa:1.9.2.RELEASE'
-    compile 'org.hibernate:hibernate-entitymanager:5.0.1.Final'
-    compile 'commons-dbcp:commons-dbcp:1.4'
-    compile 'com.h2database:h2:1.4.190'
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
-    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
-    testCompileOnly 'org.apiguardian:apiguardian-api:1.0.0'
-    testCompile 'org.mockito:mockito-core:1.10.19'
+    compile libs.spring_data_jpa
+    compile libs.hibernate_entitymanager
+    compile libs.commons_dbcp
+    compile libs.h2
+    testCompile libs.junit_jupiter_api
+    testRuntime libs.junit_jupiter_engine
+    testCompileOnly libs.apiguardian_api
+    testCompile libs.mockito_core
 }
 
 group = 'com.iluwatar.layers'

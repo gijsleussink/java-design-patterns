@@ -15,6 +15,6 @@ dependencies {
     compile 'org.hsqldb:hsqldb:2.3.1'
     compile 'org.lazyluke:log4jdbc-remix:0.2.7'
     runtime 'org.apache.isis.core:isis-core-webserver:1.9.0'
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.junit.vintage:junit-vintage-engine:4.12.2'
+    testCompile libs.junit4
+    testCompile libs.junit_vintage_engine
 }

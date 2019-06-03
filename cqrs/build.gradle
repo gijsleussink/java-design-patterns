@@ -1,7 +1,7 @@
 dependencies {
-    compile 'com.h2database:h2:1.4.190'
-    compile 'org.hibernate:hibernate-core:5.0.1.Final'
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
-    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
-    testCompileOnly 'org.apiguardian:apiguardian-api:1.0.0'
+    compile libs.h2
+    compile libs.hibernate_core
+    testCompile libs.junit_jupiter_api
+    testRuntime libs.junit_jupiter_engine
+    testCompileOnly libs.apiguardian_api
 }

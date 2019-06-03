@@ -1,12 +1,12 @@
 dependencies {
-    compile 'org.apache.isis.core:isis-core-applib:1.9.0'
+    compile libs.isis_core_applib
     compile 'org.datanucleus:datanucleus-core:4.1.2'
     compile 'org.datanucleus:datanucleus-jodatime:4.1.0-release'
     compile 'org.datanucleus:datanucleus-api-jdo:4.1.0-release'
-    testCompile 'org.apache.isis.core:isis-core-unittestsupport:1.9.0'
-    testCompile 'org.junit.vintage:junit-vintage-engine:4.12.2'
+    testCompile libs.isis_core_unittestsupport
+    testCompile libs.junit_vintage_engine
     testCompile 'org.objenesis:objenesis:1.4'
-    testCompile 'org.assertj:assertj-core:2.0.0'
+    testCompile libs.assertj_core
 }
 
 task datanucleusEnhance {
