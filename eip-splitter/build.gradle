@@ -6,5 +6,6 @@ dependencies {
     compile 'org.apache.camel:camel-test-spring:2.16.1'
     testCompile 'com.github.sbrannen:spring-test-junit5:1.0.2'
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.2'
-    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
+    testCompileOnly 'org.apiguardian:apiguardian-api:1.0.0'
 }
