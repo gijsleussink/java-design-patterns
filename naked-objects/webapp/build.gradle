@@ -5,16 +5,16 @@ plugins {
 dependencies {
     implementation project(':naked-objects:naked-objects-dom')
     implementation project(':naked-objects:naked-objects-fixture')
-    implementation 'org.apache.isis.viewer:isis-viewer-wicket-impl:1.9.0'
-    implementation 'org.apache.isis.core:isis-core-viewer-restfulobjects-server:1.9.0'
-    implementation 'org.apache.isis.core:isis-core-security-shiro:1.9.0'
-    implementation 'org.apache.isis.core:isis-core-runtime:1.9.0'
-    implementation 'org.apache.isis.core:isis-core-wrapper:1.9.0'
-    implementation 'org.apache.isis.core:isis-core-security:1.9.0'
+    implementation libs.isis_viewer_wicket_impl
+    implementation libs.isis_core_viewer_restfulobjects_server
+    implementation libs.isis_core_security_shiro
+    implementation libs.isis_core_runtime
+    implementation libs.isis_core_wrapper
+    implementation libs.isis_core_security
     implementation 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
-    implementation 'org.hsqldb:hsqldb:2.3.1'
+    implementation libs.hsqldb
     implementation 'org.lazyluke:log4jdbc-remix:0.2.7'
-    runtime 'org.apache.isis.core:isis-core-webserver:1.9.0'
+    runtimeOnly libs.isis_core_webserver
     testImplementation libs.junit4
     testImplementation libs.junit_vintage_engine
 }

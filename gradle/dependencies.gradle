@@ -13,6 +13,7 @@ ext {
         jackson: '2.8.5',
         junit: '5.4.2',
         logback: '1.1.7',
+        lombok: '1.16.18',
         mockito: '2.25.0',
         slf4j: '1.7.21',
         spring: '4.2.4.RELEASE',
@@ -41,6 +42,7 @@ ext {
         hibernate_entitymanager: "org.hibernate:hibernate-entitymanager:$v.hibernate",
         hsqldb: "org.hsqldb:hsqldb:$v.hsqldb",
 
+        lombok: "org.projectlombok:lombok:$v.lombok",
         guava: "com.google.guava:guava:$v.guava",
         apache_httpclient: 'org.apache.httpcomponents:httpclient:4.5.2',
         commons_dbcp: 'commons-dbcp:commons-dbcp:1.4',
@@ -68,6 +70,11 @@ ext {
         isis_core_integtestsupport: "org.apache.isis.core:isis-core-integtestsupport:$v.apache_isis",
         isis_core_specsupport: "org.apache.isis.core:isis-core-specsupport:$v.apache_isis",
         isis_core_wrapper: "org.apache.isis.core:isis-core-wrapper:$v.apache_isis",
+        isis_core_webserver: "org.apache.isis.core:isis-core-webserver:$v.apache_isis",
         isis_core_runtime: "org.apache.isis.core:isis-core-runtime:$v.apache_isis",
+        isis_viewer_wicket_impl: "org.apache.isis.viewer:isis-viewer-wicket-impl:$v.apache_isis",
+        isis_core_viewer_restfulobjects_server: "org.apache.isis.core:isis-core-viewer-restfulobjects-server:$v.apache_isis",
+        isis_core_security_shiro: "org.apache.isis.core:isis-core-security-shiro:$v.apache_isis",
+        isis_core_security: "org.apache.isis.core:isis-core-security:$v.apache_isis",
     ]
 }

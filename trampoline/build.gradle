@@ -1,6 +1,6 @@
 dependencies {
-    annotationProcessor 'org.projectlombok:lombok:1.16.18'
-    compileOnly 'org.projectlombok:lombok:1.16.18'
+    annotationProcessor libs.lombok
+    compileOnly libs.lombok
     testImplementation libs.junit_jupiter_api
     testCompileOnly libs.apiguardian_api
     testRuntimeOnly libs.junit_jupiter_engine
