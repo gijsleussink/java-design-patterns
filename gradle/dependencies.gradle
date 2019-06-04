@@ -46,6 +46,7 @@ ext {
         google_guice: "com.google.inject:guice:$v.guice",
         lombok: "org.projectlombok:lombok:$v.lombok",
         guava: "com.google.guava:guava:$v.guava",
+        guava_testlib: "com.google.guava:guava-testlib:$v.guava",
         apache_httpclient: 'org.apache.httpcomponents:httpclient:4.5.2',
         commons_dbcp: 'commons-dbcp:commons-dbcp:1.4',
         objenesis: 'org.objenesis:objenesis:1.4',
