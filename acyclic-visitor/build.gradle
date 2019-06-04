@@ -1,8 +1,13 @@
 dependencies {
     testImplementation libs.assertj_core
-    testImplementation 'uk.org.lidalia:slf4j-test:1.0.0'
+    testImplementation 'uk.org.lidalia:slf4j-test:1.1.0'
     testImplementation libs.junit_jupiter_api
-    testRuntime libs.junit_jupiter_engine
-    testCompileOnly libs.apiguardian_api
     testImplementation libs.mockito_all
+    testCompileOnly libs.apiguardian_api
+
+    testRuntimeOnly libs.junit_jupiter_engine
+}
+
+test {
+    useJUnit()
 }

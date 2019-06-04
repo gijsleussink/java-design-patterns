@@ -4,3 +4,7 @@ dependencies {
     testCompileOnly libs.apiguardian_api
     testImplementation libs.mockito_core
 }
+
+test {
+    useJUnit()
+}
