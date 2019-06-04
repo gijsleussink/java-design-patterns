@@ -24,9 +24,8 @@
 
 package com.iluwatar.unitofwork;
 
-import org.junit.Test;
 
-import java.io.IOException;
+import org.junit.jupiter.api.Test;
 
 /**
  * AppTest

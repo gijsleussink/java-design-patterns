@@ -1,8 +1,7 @@
 dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.16.18'
-    implementation 'org.projectlombok:lombok:1.16.18'
-    testImplementation libs.junit4
+    compileOnly 'org.projectlombok:lombok:1.16.18'
     testImplementation libs.junit_jupiter_api
-    testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
+    testRuntimeOnly libs.junit_jupiter_engine
 }

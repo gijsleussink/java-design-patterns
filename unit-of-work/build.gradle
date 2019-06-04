@@ -1,5 +1,6 @@
 dependencies {
-    testImplementation libs.junit4
-    testImplementation libs.junit_vintage_engine
+    testImplementation libs.junit_jupiter_api
     testImplementation libs.mockito_core
+    testImplementation libs.mockito_junit_jupiter
+    testRuntimeOnly libs.junit_jupiter_engine
 }

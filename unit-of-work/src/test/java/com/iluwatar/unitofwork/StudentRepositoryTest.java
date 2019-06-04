@@ -24,24 +24,24 @@
 
 package com.iluwatar.unitofwork;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 /**
  * tests {@link StudentRepository}
  */
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class StudentRepositoryTest {
   private final Student student1 = new Student(1, "Ram", "street 9, cupertino");
   private final Student student2 = new Student(1, "Sham", "Z bridge, pune");
@@ -51,7 +51,7 @@ public class StudentRepositoryTest {
   private StudentDatabase studentDatabase;
   private StudentRepository studentRepository;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     context = new HashMap<>();
     studentRepository = new StudentRepository(context, studentDatabase);

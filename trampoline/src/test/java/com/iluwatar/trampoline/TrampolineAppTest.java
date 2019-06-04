@@ -22,12 +22,8 @@
  */
 package com.iluwatar.trampoline;
 
-import org.junit.Test;
-
-import java.io.IOException;
-
-import static org.junit.Assert.*;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test for trampoline pattern.
@@ -38,7 +34,7 @@ public class TrampolineAppTest {
   @Test
   public void testTrampolineWithFactorialFunction() {
     int result = TrampolineApp.loop(10, 1).result();
-    assertEquals("Be equal", 3628800, result);
+    Assertions.assertEquals(3628800, result);
   }
 
 }
