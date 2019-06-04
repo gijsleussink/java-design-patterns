@@ -1,8 +1,8 @@
 dependencies {
-    compile 'org.mongodb:mongodb-driver:3.0.4'
-    compile 'org.mongodb:mongodb-driver-core:3.0.4'
-    compile 'org.mongodb:bson:3.0.4'
-    testCompile libs.junit_jupiter_api
+    implementation 'org.mongodb:mongodb-driver:3.0.4'
+    implementation 'org.mongodb:mongodb-driver-core:3.0.4'
+    implementation 'org.mongodb:bson:3.0.4'
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

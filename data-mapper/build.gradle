@@ -1,6 +1,6 @@
 dependencies {
-    compile 'log4j:log4j:1.2.17'
-    testCompile libs.junit_jupiter_api
+    implementation 'log4j:log4j:1.2.17'
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

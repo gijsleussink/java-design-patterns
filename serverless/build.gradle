@@ -1,14 +1,14 @@
 dependencies {
-    compile 'com.amazonaws:aws-lambda-java-core:1.1.0'
-    compile 'com.amazonaws:aws-java-sdk-dynamodb:1.11.289'
-    compile 'com.amazonaws:aws-lambda-java-events:2.0.1'
-    compile 'com.amazonaws:aws-lambda-java-log4j:1.0.0'
-    compile libs.jackson_core
-    compile libs.jackson_databind
-    compile libs.jackson_annotations
-    testCompile libs.junit_jupiter_api
+    implementation 'com.amazonaws:aws-lambda-java-core:1.1.0'
+    implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.289'
+    implementation 'com.amazonaws:aws-lambda-java-events:2.0.1'
+    implementation 'com.amazonaws:aws-lambda-java-log4j:1.0.0'
+    implementation libs.jackson_core
+    implementation libs.jackson_databind
+    implementation libs.jackson_annotations
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
-    testCompile libs.mockito_core
-    testCompile libs.junit4
+    testImplementation libs.mockito_core
+    testImplementation libs.junit4
 }

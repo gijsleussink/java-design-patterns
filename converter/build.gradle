@@ -1,6 +1,6 @@
 dependencies {
-    compile libs.guava
-    testCompile libs.junit_jupiter_api
+    implementation libs.guava
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

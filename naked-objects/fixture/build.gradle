@@ -1,3 +1,6 @@
+plugins {
+    id 'java-library'
+}
 dependencies {
-    compile project(':naked-objects:naked-objects-dom')
+    api project(':naked-objects:naked-objects-dom')
 }

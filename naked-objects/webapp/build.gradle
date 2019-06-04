@@ -3,18 +3,18 @@ plugins {
 }
 
 dependencies {
-    compile project(':naked-objects:naked-objects-dom')
-    compile project(':naked-objects:naked-objects-fixture')
-    compile 'org.apache.isis.viewer:isis-viewer-wicket-impl:1.9.0'
-    compile 'org.apache.isis.core:isis-core-viewer-restfulobjects-server:1.9.0'
-    compile 'org.apache.isis.core:isis-core-security-shiro:1.9.0'
-    compile 'org.apache.isis.core:isis-core-runtime:1.9.0'
-    compile 'org.apache.isis.core:isis-core-wrapper:1.9.0'
-    compile 'org.apache.isis.core:isis-core-security:1.9.0'
-    compile 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
-    compile 'org.hsqldb:hsqldb:2.3.1'
-    compile 'org.lazyluke:log4jdbc-remix:0.2.7'
+    implementation project(':naked-objects:naked-objects-dom')
+    implementation project(':naked-objects:naked-objects-fixture')
+    implementation 'org.apache.isis.viewer:isis-viewer-wicket-impl:1.9.0'
+    implementation 'org.apache.isis.core:isis-core-viewer-restfulobjects-server:1.9.0'
+    implementation 'org.apache.isis.core:isis-core-security-shiro:1.9.0'
+    implementation 'org.apache.isis.core:isis-core-runtime:1.9.0'
+    implementation 'org.apache.isis.core:isis-core-wrapper:1.9.0'
+    implementation 'org.apache.isis.core:isis-core-security:1.9.0'
+    implementation 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
+    implementation 'org.hsqldb:hsqldb:2.3.1'
+    implementation 'org.lazyluke:log4jdbc-remix:0.2.7'
     runtime 'org.apache.isis.core:isis-core-webserver:1.9.0'
-    testCompile libs.junit4
-    testCompile libs.junit_vintage_engine
+    testImplementation libs.junit4
+    testImplementation libs.junit_vintage_engine
 }

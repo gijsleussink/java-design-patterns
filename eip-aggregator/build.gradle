@@ -1,11 +1,11 @@
 dependencies {
-    compile libs.spring_boot_starter_web
-    compile libs.camel_core
-    compile libs.camel_spring_boot
-    compile libs.spring_boot_starter_test
-    compile libs.camel_test_spring
-    testCompile libs.sbrannen_spring_test_junit5
-    testCompile libs.junit_jupiter_api
+    implementation libs.spring_boot_starter_web
+    implementation libs.camel_core
+    implementation libs.camel_spring_boot
+    implementation libs.spring_boot_starter_test
+    implementation libs.camel_test_spring
+    testImplementation libs.sbrannen_spring_test_junit5
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

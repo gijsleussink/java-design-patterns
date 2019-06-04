@@ -1,6 +1,6 @@
 dependencies {
-    compile 'com.google.code.gson:gson:2.8.1'
-    testCompile libs.junit_jupiter_api
+    implementation 'com.google.code.gson:gson:2.8.1'
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

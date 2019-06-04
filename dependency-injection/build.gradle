@@ -1,6 +1,6 @@
 dependencies {
-    compile 'com.google.inject:guice:4.0'
-    testCompile libs.junit_jupiter_api
+    implementation 'com.google.inject:guice:4.0'
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

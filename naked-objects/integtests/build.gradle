@@ -1,11 +1,11 @@
 dependencies {
-    compile project(':naked-objects:naked-objects-fixture')
-    compile libs.isis_core_unittestsupport
-    compile libs.isis_core_integtestsupport
-    compile libs.isis_core_specsupport
-    compile libs.isis_core_wrapper
-    compile libs.isis_core_runtime
-    compile libs.hsqldb
-    testCompile libs.assertj_core
-    testCompile libs.junit_vintage_engine
+    implementation project(':naked-objects:naked-objects-fixture')
+    implementation libs.isis_core_unittestsupport
+    implementation libs.isis_core_integtestsupport
+    implementation libs.isis_core_specsupport
+    implementation libs.isis_core_wrapper
+    implementation libs.isis_core_runtime
+    implementation libs.hsqldb
+    testImplementation libs.assertj_core
+    testImplementation libs.junit_vintage_engine
 }

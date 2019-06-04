@@ -1,12 +1,15 @@
+plugins {
+    id 'java-library'
+}
 dependencies {
-    compile libs.isis_core_applib
-    compile 'org.datanucleus:datanucleus-core:4.1.2'
-    compile 'org.datanucleus:datanucleus-jodatime:4.1.0-release'
-    compile 'org.datanucleus:datanucleus-api-jdo:4.1.0-release'
-    testCompile libs.isis_core_unittestsupport
-    testCompile libs.junit_vintage_engine
-    testCompile 'org.objenesis:objenesis:1.4'
-    testCompile libs.assertj_core
+    api libs.isis_core_applib
+    implementation 'org.datanucleus:datanucleus-core:4.1.2'
+    implementation 'org.datanucleus:datanucleus-jodatime:4.1.0-release'
+    implementation 'org.datanucleus:datanucleus-api-jdo:4.1.0-release'
+    testImplementation libs.isis_core_unittestsupport
+    testImplementation libs.junit_vintage_engine
+    testImplementation 'org.objenesis:objenesis:1.4'
+    testImplementation libs.assertj_core
 }
 
 task datanucleusEnhance {

@@ -1,8 +1,8 @@
 dependencies {
-    testCompile libs.assertj_core
-    testCompile 'uk.org.lidalia:slf4j-test:1.0.0'
-    testCompile libs.junit_jupiter_api
+    testImplementation libs.assertj_core
+    testImplementation 'uk.org.lidalia:slf4j-test:1.0.0'
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
-    testCompile libs.mockito_all
+    testImplementation libs.mockito_all
 }

@@ -1,7 +1,7 @@
 dependencies {
-    compile 'com.google.inject:guice:4.0'
-    compile 'org.mongodb:mongo-java-driver:3.3.0'
-    testCompile libs.junit_jupiter_api
+    implementation 'com.google.inject:guice:4.0'
+    implementation 'org.mongodb:mongo-java-driver:3.3.0'
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

@@ -1,9 +1,9 @@
 dependencies {
-    compile libs.spring_webmvc
-    compile libs.spring_boot_starter_web
-    compile libs.apache_httpclient
-    testCompile libs.junit_jupiter_api
+    implementation libs.spring_webmvc
+    implementation libs.spring_boot_starter_web
+    implementation libs.apache_httpclient
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
-    testCompile libs.mockito_core
+    testImplementation libs.mockito_core
 }

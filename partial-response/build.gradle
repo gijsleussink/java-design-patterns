@@ -1,5 +1,5 @@
 dependencies {
-    testCompile libs.junit4
-    testCompile libs.junit_vintage_engine
-    testCompile libs.mockito_core
+    testImplementation libs.junit4
+    testImplementation libs.junit_vintage_engine
+    testImplementation libs.mockito_core
 }

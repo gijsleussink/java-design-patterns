@@ -1,11 +1,11 @@
 dependencies {
-    compile 'org.springframework.data:spring-data-jpa:1.9.2.RELEASE'
-    compile 'org.hibernate:hibernate-entitymanager:5.0.1.Final'
-    compile libs.commons_dbcp
-    compile libs.h2
-    compile libs.guava
-    testCompile libs.sbrannen_spring_test_junit5
-    testCompile libs.junit_jupiter_api
+    implementation libs.spring_data_jpa
+    implementation libs.hibernate_entitymanager
+    implementation libs.commons_dbcp
+    implementation libs.h2
+    implementation libs.guava
+    testImplementation libs.sbrannen_spring_test_junit5
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
 }

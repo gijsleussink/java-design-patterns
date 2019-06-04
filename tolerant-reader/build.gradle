@@ -1,6 +1,6 @@
 dependencies {
-    testCompile libs.junit_jupiter_api
+    testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
-    testCompile 'org.junit.jupiter:junit-jupiter-migrationsupport:5.0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-migrationsupport:5.0.2'
 }
