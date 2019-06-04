@@ -1,7 +1,7 @@
 
 
 dependencies {
-    implementation 'log4j:log4j:1.2.17'
+    implementation libs.log4j
     implementation libs.h2
     testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine

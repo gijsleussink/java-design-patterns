@@ -13,6 +13,7 @@ ext {
         hsqldb: '2.3.1',
         jackson: '2.8.5',
         junit: '5.4.2',
+        log4j: '1.2.17',
         logback: '1.1.7',
         lombok: '1.16.18',
         mockito: '2.25.0',
@@ -31,6 +32,7 @@ ext {
         slf4j_api: "org.slf4j:slf4j-api:$v.slf4j",
         logback_classic: "ch.qos.logback:logback-classic:$v.logback",
         logback_core: "ch.qos.logback:logback-core:$v.logback",
+        log4j: "log4j:log4j:$v.log4j",
 
         jackson_core: "com.fasterxml.jackson.core:jackson-core:$v.jackson",
         jackson_databind: "com.fasterxml.jackson.core:jackson-databind:$v.jackson",
