@@ -1,6 +1,6 @@
 dependencies {
     testImplementation libs.junit_jupiter_api
+    testImplementation libs.junit_jupiter_params
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.0.2'
 }
