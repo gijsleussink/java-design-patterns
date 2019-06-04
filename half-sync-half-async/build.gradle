@@ -1,6 +1,7 @@
 dependencies {
     testImplementation libs.junit_jupiter_api
-    testRuntime libs.junit_jupiter_engine
-    testCompileOnly libs.apiguardian_api
     testImplementation libs.mockito_core
+    testImplementation libs.mockito_junit_jupiter
+    testCompileOnly libs.apiguardian_api
+    testRuntimeOnly libs.junit_jupiter_engine
 }

@@ -24,34 +24,31 @@ package com.iluwatar.halfsynchalfasync;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.inOrder;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.timeout;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.*;
 
 /**
  * Date: 12/12/15 - 11:15 PM
  *
  * @author Jeroen Meulemeester
  */
+@ExtendWith(MockitoExtension.class)
 public class AsynchronousServiceTest {
   private AsynchronousService service;
+  @Mock
   private AsyncTask<Object> task;
 
   @BeforeEach
   public void setUp() {
     service = new AsynchronousService(new LinkedBlockingQueue<>());
-    task = mock(AsyncTask.class);
   }
 
   @Test
