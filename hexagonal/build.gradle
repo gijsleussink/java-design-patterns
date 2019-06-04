@@ -1,6 +1,6 @@
 dependencies {
     implementation libs.google_guice
-    implementation 'org.mongodb:mongo-java-driver:3.3.0'
+    implementation libs.mongodb_java_driver
     testImplementation libs.junit_jupiter_api
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
