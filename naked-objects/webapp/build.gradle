@@ -15,6 +15,5 @@ dependencies {
     implementation libs.hsqldb
     implementation 'org.lazyluke:log4jdbc-remix:0.2.7'
     runtimeOnly libs.isis_core_webserver
-    testImplementation libs.junit4
-    testImplementation libs.junit_vintage_engine
+    testImplementation libs.junit_jupiter_api
 }
