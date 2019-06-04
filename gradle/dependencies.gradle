@@ -55,6 +55,7 @@ ext {
         junit_jupiter_engine: "org.junit.jupiter:junit-jupiter-engine:$v.junit",
         junit_vintage_engine: "org.junit.vintage:junit-vintage-engine:4.12.2",
         junit4: 'junit:junit:4.12',
+        hamcrest_library: "org.hamcrest:hamcrest-library:$v.hamcrest_library",
         sbrannen_spring_test_junit5: 'com.github.sbrannen:spring-test-junit5:1.0.2',
         apiguardian_api: "org.apiguardian:apiguardian-api:$v.apiguardian",
         mockito_core: "org.mockito:mockito-core:$v.mockito",

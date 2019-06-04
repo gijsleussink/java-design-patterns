@@ -22,27 +22,29 @@
  */
 package com.iluwatar.serverless.faas.api;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import com.amazonaws.services.lambda.runtime.Context;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsNull.notNullValue;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
  * Unit tests for LambdaInfoApiHandler
  */
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class LambdaInfoApiHandlerTest {
+
+  @Mock
+  public Context context;
 
   @Test
   public void handleRequestWithMockContext() {
     LambdaInfoApiHandler lambdaInfoApiHandler = new LambdaInfoApiHandler();
-    Context context = mock(Context.class);
     when(context.getAwsRequestId()).thenReturn("mock aws request id");
 
     assertThat(lambdaInfoApiHandler.handleRequest(null, context), notNullValue());

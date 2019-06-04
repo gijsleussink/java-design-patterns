@@ -28,23 +28,22 @@ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.iluwatar.serverless.baas.api.SavePersonApiHandler;
 import com.iluwatar.serverless.baas.model.Address;
 import com.iluwatar.serverless.baas.model.Person;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 /**
  * Unit tests for SavePersonApiHandler
  * Created by dheeraj.mummar on 3/4/18.
  */
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class SavePersonApiHandlerTest {
 
   private SavePersonApiHandler savePersonApiHandler;
@@ -54,7 +53,7 @@ public class SavePersonApiHandlerTest {
 
   private ObjectMapper objectMapper = new ObjectMapper();
 
-  @Before
+  @BeforeEach
   public void setUp() {
     this.savePersonApiHandler = new SavePersonApiHandler();
     this.savePersonApiHandler.setDynamoDbMapper(dynamoDbMapper);
@@ -67,8 +66,8 @@ public class SavePersonApiHandlerTest {
         this.savePersonApiHandler
             .handleRequest(apiGatewayProxyRequestEvent(objectMapper.writeValueAsString(person)), mock(Context.class));
     verify(dynamoDbMapper, times(1)).save(person);
-    Assert.assertNotNull(apiGatewayProxyResponseEvent);
-    Assert.assertEquals(new Integer(201), apiGatewayProxyResponseEvent.getStatusCode());
+    assertNotNull(apiGatewayProxyResponseEvent);
+    assertEquals(new Integer(201), apiGatewayProxyResponseEvent.getStatusCode());
   }
 
   @Test
@@ -76,8 +75,8 @@ public class SavePersonApiHandlerTest {
     APIGatewayProxyResponseEvent apiGatewayProxyResponseEvent =
         this.savePersonApiHandler
             .handleRequest(apiGatewayProxyRequestEvent("invalid sample request"), mock(Context.class));
-    Assert.assertNotNull(apiGatewayProxyResponseEvent);
-    Assert.assertEquals(new Integer(400), apiGatewayProxyResponseEvent.getStatusCode());
+    assertNotNull(apiGatewayProxyResponseEvent);
+    assertEquals(new Integer(400), apiGatewayProxyResponseEvent.getStatusCode());
   }
 
   private APIGatewayProxyRequestEvent apiGatewayProxyRequestEvent(String body) {
