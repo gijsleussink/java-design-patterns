@@ -1,9 +1,10 @@
 dependencies {
     implementation libs.spring_webmvc
     implementation libs.spring_boot_starter_web
-    implementation 'org.apache.httpcomponents:httpclient:4.5.2'
+    implementation libs.apache_httpclient
     testImplementation libs.junit_jupiter_api
+    testImplementation libs.mockito_core
+    testImplementation libs.mockito_junit_jupiter
     testRuntime libs.junit_jupiter_engine
     testCompileOnly libs.apiguardian_api
-    testImplementation libs.mockito_core
 }

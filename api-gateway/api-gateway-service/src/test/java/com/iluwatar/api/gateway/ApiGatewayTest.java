@@ -24,9 +24,10 @@ package com.iluwatar.api.gateway;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -34,6 +35,7 @@ import static org.mockito.Mockito.when;
 /**
  * Test API Gateway Pattern
  */
+@ExtendWith(MockitoExtension.class)
 public class ApiGatewayTest {
 
   @InjectMocks
@@ -44,11 +46,6 @@ public class ApiGatewayTest {
 
   @Mock
   private PriceClient priceClient;
-
-  @BeforeEach
-  public void setup() {
-    MockitoAnnotations.initMocks(this);
-  }
 
   /**
    * Tests getting the data for a desktop client
