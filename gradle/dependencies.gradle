@@ -51,7 +51,7 @@ ext {
         camel_core: "org.apache.camel:camel-core:$v.camel",
         camel_spring_boot: "org.apache.camel:camel-spring-boot:$v.camel",
         camel_stream: "org.apache.camel:camel-stream:$v.camel",
-        camel_test_spring: 'org.apache.camel:camel-test-spring:2.16.1',
+        camel_test_spring: "org.apache.camel:camel-test-spring:$v.camel",
 
         junit_jupiter_api: "org.junit.jupiter:junit-jupiter-api:$v.junit",
         junit_jupiter_engine: "org.junit.jupiter:junit-jupiter-engine:$v.junit",
