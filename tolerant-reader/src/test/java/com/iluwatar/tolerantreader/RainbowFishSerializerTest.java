@@ -22,12 +22,11 @@
  */
 package com.iluwatar.tolerantreader;
 
-import org.junit.Rule;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.migrationsupport.rules.EnableRuleMigrationSupport;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.io.TempDir;
 
 import java.io.File;
+import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
@@ -37,14 +36,13 @@ import static org.junit.jupiter.api.Assertions.assertNotSame;
  *
  * @author Jeroen Meulemeester
  */
-@EnableRuleMigrationSupport
 public class RainbowFishSerializerTest {
 
   /**
    * Create a temporary folder, used to generate files in during this test
    */
-  @Rule
-  public final TemporaryFolder testFolder = new TemporaryFolder();
+  @TempDir
+  public Path testFolder;
 
   /**
    * Rainbow fish version 1 used during the tests
@@ -61,10 +59,10 @@ public class RainbowFishSerializerTest {
    */
   @Test
   public void testWriteV1ReadV1() throws Exception {
-    final File outputFile = this.testFolder.newFile();
-    RainbowFishSerializer.writeV1(V1, outputFile.getPath());
+    final File outputFile = this.testFolder.resolve("V1ReadV1").toFile();
+    RainbowFishSerializer.writeV1(V1, outputFile.getCanonicalPath());
 
-    final RainbowFish fish = RainbowFishSerializer.readV1(outputFile.getPath());
+    final RainbowFish fish = RainbowFishSerializer.readV1(outputFile.getCanonicalPath());
     assertNotSame(V1, fish);
     assertEquals(V1.getName(), fish.getName());
     assertEquals(V1.getAge(), fish.getAge());
@@ -78,8 +76,8 @@ public class RainbowFishSerializerTest {
    */
   @Test
   public void testWriteV2ReadV1() throws Exception {
-    final File outputFile = this.testFolder.newFile();
-    RainbowFishSerializer.writeV2(V2, outputFile.getPath());
+    final File outputFile = this.testFolder.resolve("V2ReadV1").toFile();
+    RainbowFishSerializer.writeV2(V2, outputFile.getCanonicalPath());
 
     final RainbowFish fish = RainbowFishSerializer.readV1(outputFile.getPath());
     assertNotSame(V2, fish);

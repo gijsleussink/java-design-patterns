@@ -22,9 +22,10 @@
  */
 package com.iluwatar.tolerantreader;
 
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Date: 12/30/15 - 18:34 PM
