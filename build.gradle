@@ -27,6 +27,7 @@ subprojects {
         useJUnitPlatform()
         testLogging {
             exceptionFormat = 'full'
+            events "passed", "skipped", "failed"
         }
     }
     sourceCompatibility = JavaVersion.VERSION_1_8
