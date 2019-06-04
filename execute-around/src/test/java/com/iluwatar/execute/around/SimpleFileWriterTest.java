@@ -25,8 +25,7 @@ package com.iluwatar.execute.around;
 import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.migrationsupport.rules.EnableRuleMigrationSupport;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.io.TempDir;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,21 +40,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  * @author Jeroen Meulemeester
  */
-@EnableRuleMigrationSupport
 public class SimpleFileWriterTest {
 
-  @Rule
-  public final TemporaryFolder testFolder = new TemporaryFolder();
+  @TempDir
+  public File testFolder;
 
   @Test
   public void testWriterNotNull() throws Exception {
-    final File temporaryFile = this.testFolder.newFile();
+    final File temporaryFile = new File(testFolder, "test");
     new SimpleFileWriter(temporaryFile.getPath(), Assertions::assertNotNull);
   }
 
   @Test
   public void testCreatesNonExistentFile() throws Exception {
-    final File nonExistingFile = new File(this.testFolder.getRoot(), "non-existing-file");
+    final File nonExistingFile = new File(testFolder, "non-existing-file");
     assertFalse(nonExistingFile.exists());
 
     new SimpleFileWriter(nonExistingFile.getPath(), Assertions::assertNotNull);
@@ -66,9 +64,7 @@ public class SimpleFileWriterTest {
   public void testContentsAreWrittenToFile() throws Exception {
     final String testMessage = "Test message";
 
-    final File temporaryFile = this.testFolder.newFile();
-    assertTrue(temporaryFile.exists());
-
+    final File temporaryFile = new File(testFolder, "file-for-test-message");
     new SimpleFileWriter(temporaryFile.getPath(), writer -> writer.write(testMessage));
     assertTrue(Files.lines(temporaryFile.toPath()).allMatch(testMessage::equals));
   }
@@ -77,7 +73,7 @@ public class SimpleFileWriterTest {
   public void testRipplesIoExceptionOccurredWhileWriting() {
     String message = "Some error";
     assertThrows(IOException.class, () -> {
-      final File temporaryFile = this.testFolder.newFile();
+      final File temporaryFile = new File(testFolder, "file-for-ripple-io-exception-test");
       new SimpleFileWriter(temporaryFile.getPath(), writer -> {
         throw new IOException(message);
       });
