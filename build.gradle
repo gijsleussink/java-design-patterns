@@ -19,8 +19,8 @@ subprojects {
 
     dependencies {
         implementation libs.slf4j_api
-        implementation 'ch.qos.logback:logback-classic:1.1.7'
-        implementation 'ch.qos.logback:logback-core:1.1.7'
+        implementation libs.logback_classic
+        implementation libs.logback_core
     }
 
     sourceCompatibility = '1.8'

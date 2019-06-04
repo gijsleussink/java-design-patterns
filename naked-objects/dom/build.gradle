@@ -3,12 +3,12 @@ plugins {
 }
 dependencies {
     api libs.isis_core_applib
-    implementation 'org.datanucleus:datanucleus-core:4.1.2'
-    implementation 'org.datanucleus:datanucleus-jodatime:4.1.0-release'
-    implementation 'org.datanucleus:datanucleus-api-jdo:4.1.0-release'
+    implementation libs.datanucleus_core
+    implementation libs.datanucleus_jodatime
+    implementation libs.datanucleus_api_jdo
     testImplementation libs.isis_core_unittestsupport
     testImplementation libs.junit_vintage_engine
-    testImplementation 'org.objenesis:objenesis:1.4'
+    testImplementation libs.objenesis
     testImplementation libs.assertj_core
 }
 
